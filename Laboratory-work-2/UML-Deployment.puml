@@ -1,0 +1,48 @@
+@startuml
+
+title UML-діаграма розгортання ПП
+
+left to right direction
+
+skinparam componentStyle uml1
+
+node "<<Mobile phone>>" as mp {
+    node "<<Operating System Android/iOS>>" {
+        node "<<Mobile Application>>" {
+            component [*.apk]
+        }
+    }
+}
+
+interface sensor
+
+sensor -- mp
+
+node "<<Server 1>>" as serv1 {
+	node "<<Operating System Linux>>" as l1 {
+	    node "<<Java Application Server>>" {
+		    component [*.jar]
+		}
+	}
+}
+
+mp -- serv1
+
+node "<<Google Cloud Platform>>" as serv2 {
+	   component [Google Maps API]
+
+}
+
+
+node "<<Server 2>>" as serv3 {
+	  node "<<Operating System Linux>>" {
+	     node "<<Database Server PosgreSQL>>" {
+		    database "PosgreSQL DataBase"
+		}
+	} 
+
+}
+
+serv1 -- serv2
+serv1 -- serv3
+@enduml
