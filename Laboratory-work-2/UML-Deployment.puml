@@ -37,7 +37,7 @@ node "<<Google Cloud Platform>>" as serv2 {
 node "<<Server 2>>" as serv3 {
 	  node "<<Operating System Linux>>" {
 	     node "<<Database Server PosgreSQL>>" {
-		    database "PosgreSQL DataBase"
+		    database "Relation DataBase"
 		}
 	} 
 
