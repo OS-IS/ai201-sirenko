@@ -1,0 +1,692 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Dragon_DFD",
+    "owner": "",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Catrip",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 510,
+              "y": -480
+            },
+            "size": {
+              "width": 820,
+              "height": 400
+            },
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "067b40cc-5d70-4a67-86ef-2590b50fc6bf",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 280,
+              "y": -350
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Mobile Client"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 0,
+            "id": "2b26ec02-775d-4758-8905-e160f95c6459",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Mobile Client",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1150,
+              "y": -430
+            },
+            "size": {
+              "width": 150,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Azure Database for\nPostgreSQL"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 1,
+            "id": "e4b45ed5-acf2-4a57-8990-8c8762c4a661",
+            "data": {
+              "type": "tm.Store",
+              "name": "Azure Database for\nPostgreSQL",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "16b6a98c-852b-47b8-b7a0-eb642d26e3c4",
+                  "title": "An adversary may read and/or tamper with the data transmitted to Azure Postgres DB due to weak configuration",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An adversary may read and/or tamper with the data transmitted to Azure Postgres DB due to weak configuration",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1360,
+              "y": -170
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Google Maps API"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 2,
+            "id": "7540f813-1041-4a86-b8c0-fd604c9381b1",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Google Maps API",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 670,
+              "y": -370
+            },
+            "size": {
+              "width": 160,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Azure App Service \nMobile App"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 3,
+            "id": "23fe6325-3cbc-40bc-a8cd-42724720987b",
+            "data": {
+              "type": "tm.Process",
+              "name": "Azure App Service \nMobile App",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "ca818643-a8f7-4ab2-a14f-a0c8a0f1ad8a",
+                  "title": "An adversary may gain long term persistent access to related resources through the compromise of an application identity",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An adversary may gain long term persistent access to related resources through the compromise of an application identity",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "ec00e1c3-11ea-4a3c-8262-beea6ef54697",
+                  "title": "An adversary may perform action(s) on behalf of another user due to lack of controls against cross domain requests",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "An adversary may perform action(s) on behalf of another user due to lack of controls against cross domain requests",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "2e0b5cbd-a3d8-49da-b1d5-daab0b86fa01",
+                  "title": "An adversary may perform action(s) on behalf of another user due to lack of controls against cross domain requests",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An adversary may perform action(s) on behalf of another user due to lack of controls against cross domain requests",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "16b6a98c-852b-47b8-b7a0-eb642d26e3c4",
+                  "title": "Attacker can deny a malicious act on an API leading to repudiation issues",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Attacker can deny a malicious act on an API leading to repudiation issues",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                },
+                {
+                  "id": "16b6a98c-852b-47b8-b7a0-eb642d26e3c4",
+                  "title": "An adversary may spoof Azure App Service Mobile App and gain access to Web API",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "If proper authentication is not in place, an adversary can spoof a source process or external entity and gain unauthorized access to the Web Application",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 3
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "MobileClient-Service-Mobile-App-Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "b21fc1e1-3b56-4ff1-a66c-24f17897827e",
+            "labels": [
+              "MobileClient-Service-Mobile-App-Response"
+            ],
+            "source": {
+              "cell": "23fe6325-3cbc-40bc-a8cd-42724720987b"
+            },
+            "target": {
+              "cell": "2b26ec02-775d-4758-8905-e160f95c6459"
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": -250
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "MobileClient-Service-Mobile-App-Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ed1d4c6c-5dfa-46f9-a990-d11f02f55989",
+                  "title": "An adversary can fingerprint an Azure web application or API by leveraging server header information",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "An adversary can fingerprint an Azure web application or API by leveraging server header information",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "d5538c6c-2e51-4e35-8596-c89bd058dbaa",
+            "labels": [
+              "MobileClient-Service-Mobile-App-Request"
+            ],
+            "source": {
+              "x": 390,
+              "y": -330
+            },
+            "target": {
+              "x": 680,
+              "y": -340
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": -410
+              },
+              {
+                "x": 630,
+                "y": -410
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Service-Mobile-App-Database-PostgreSQL-Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "16b6a98c-852b-47b8-b7a0-eb642d26e3c4",
+                  "title": "An adversary may block access to the application or API hosted on Azure App Service Mobile App through a denial of service attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An adversary may block access to the application or API hosted on Azure App Service Mobile App through a denial of service attack",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "id": "1b428935-3b89-411a-9f03-e73787784010",
+            "source": {
+              "cell": "23fe6325-3cbc-40bc-a8cd-42724720987b"
+            },
+            "target": {
+              "cell": "e4b45ed5-acf2-4a57-8990-8c8762c4a661"
+            },
+            "labels": [
+              "Service-Mobile-App-Database-PostgreSQL-Request"
+            ],
+            "vertices": [
+              {
+                "x": 890,
+                "y": -440
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Service-Mobile-App-Database-PostgreSQL-Response\n",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "a0b64d61-ea91-45ea-971d-5a67e28c4135",
+            "labels": [
+              "Service-Mobile-App-Database-PostgreSQL-Response\n"
+            ],
+            "source": {
+              "cell": "e4b45ed5-acf2-4a57-8990-8c8762c4a661"
+            },
+            "target": {
+              "cell": "23fe6325-3cbc-40bc-a8cd-42724720987b"
+            },
+            "vertices": [
+              {
+                "x": 1090,
+                "y": -310
+              },
+              {
+                "x": 980,
+                "y": -270
+              },
+              {
+                "x": 950,
+                "y": -270
+              },
+              {
+                "x": 870,
+                "y": -300
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Service-Mobile-App-GoogleMaps-API-Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4f40e9c5-35a3-40e1-97b9-53a4961d3bb0",
+                  "title": "An adversary can gain access to sensitive data by performing SQL injection through Web API",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution. The primary form of SQL injection consists of direct insertion of code into user-input variables that are concatenated with SQL commands and executed. A less direct attack injects malicious code into strings that are destined for storage in a table or as metadata. When the stored strings are subsequently concatenated into a dynamic SQL command, the malicious code is executed.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "5bd28e21-3da7-4198-9719-919bd991fc6c",
+            "source": {
+              "cell": "23fe6325-3cbc-40bc-a8cd-42724720987b"
+            },
+            "target": {
+              "cell": "7540f813-1041-4a86-b8c0-fd604c9381b1"
+            },
+            "labels": [
+              "Service-Mobile-App-GoogleMaps-API-Request"
+            ],
+            "vertices": [
+              {
+                "x": 900,
+                "y": -240
+              },
+              {
+                "x": 1080,
+                "y": -200
+              },
+              {
+                "x": 1110,
+                "y": -200
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Service-Mobile-App-GoogleMaps-API-Response\n",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "9b60a37d-e359-44d5-8be7-3d97e36a85df",
+                  "title": "An adversary may block access to the application or API hosted on Azure App Service Mobile App through a denial of service attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An adversary may block access to the application or API hosted on Azure App Service Mobile App through a denial of service attack",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "id": "4f8f0455-5209-46ec-b382-6dae22a05507",
+            "source": {
+              "cell": "7540f813-1041-4a86-b8c0-fd604c9381b1"
+            },
+            "target": {
+              "cell": "23fe6325-3cbc-40bc-a8cd-42724720987b"
+            },
+            "labels": [
+              "Service-Mobile-App-GoogleMaps-API-Response\n"
+            ],
+            "vertices": [
+              {
+                "x": 1140,
+                "y": -100
+              },
+              {
+                "x": 758,
+                "y": -170
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 18
+  }
+}
